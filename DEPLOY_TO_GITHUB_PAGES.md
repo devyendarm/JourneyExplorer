@@ -28,7 +28,7 @@ Follow these steps to host your Journey Explorer visualization (charts and data)
    ```
 
 ## Step 3: Initialize Git and Push
-Open your terminal in the project root (`c:\Users\mdevy\OneDrive\Projects\AnalyticsThinking\Journey Explorer`) and run:
+Open your terminal in the project root (`c:\Users\mdevy\OneDrive\Projects\AnalyticsThinking\Journey Explorer`) and run:0
 
 ```bash
 # Initialize git if not already done
@@ -45,6 +45,14 @@ git remote add origin https://github.com/YOUR_USERNAME/journey-explorer.git
 
 # Push
 git push -u origin main
+```
+
+### Troubleshooting: "failed to push some refs"
+If you see an error like `failed to push some refs`, it usually means you created the repository on GitHub with a README or License file, so it's not empty.
+
+**To fix this (overwrite remote with your local code):**
+```bash
+git push -f origin main
 ```
 
 ## Step 4: Deploy
