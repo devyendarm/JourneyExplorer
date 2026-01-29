@@ -1,0 +1,1596 @@
+{
+  "journey": {
+    "id": "j1",
+    "name": "Ecommerce Purchase Flow",
+    "dateRange": "2021-01-01 to 2021-01-31"
+  },
+  "steps": [
+    {
+      "stepId": "1",
+      "stepName": "Session Start",
+      "order": 1
+    },
+    {
+      "stepId": "2",
+      "stepName": "Page View",
+      "order": 2
+    },
+    {
+      "stepId": "3",
+      "stepName": "View Item",
+      "order": 3
+    },
+    {
+      "stepId": "4",
+      "stepName": "Add to Cart",
+      "order": 4
+    },
+    {
+      "stepId": "5",
+      "stepName": "Begin Checkout",
+      "order": 5
+    },
+    {
+      "stepId": "6",
+      "stepName": "Add Shipping",
+      "order": 6
+    },
+    {
+      "stepId": "7",
+      "stepName": "Purchase",
+      "order": 7
+    }
+  ],
+  "segments": [
+    {
+      "segmentId": "all",
+      "segmentName": "All Users"
+    }
+  ],
+  "stepMetricsBySegment": {
+    "all": {
+      "1": {
+        "users": 10000,
+        "sessions": 12000,
+        "conversionFromPrev": 0.0
+      },
+      "2": {
+        "users": 8782,
+        "sessions": 10538,
+        "conversionFromPrev": 0.8782
+      },
+      "3": {
+        "users": 7470,
+        "sessions": 8964,
+        "conversionFromPrev": 0.8506035071737645
+      },
+      "4": {
+        "users": 4904,
+        "sessions": 5884,
+        "conversionFromPrev": 0.6564926372155288
+      },
+      "5": {
+        "users": 4355,
+        "sessions": 5226,
+        "conversionFromPrev": 0.8880505709624796
+      },
+      "6": {
+        "users": 3671,
+        "sessions": 4405,
+        "conversionFromPrev": 0.842939150401837
+      },
+      "7": {
+        "users": 3295,
+        "sessions": 3954,
+        "conversionFromPrev": 0.8975755924816127
+      }
+    }
+  },
+  "transitionMetricsBySegment": {
+    "all": {
+      "1|2": {
+        "betweenSteps": {
+          "histogram": [
+            {
+              "bin": 0,
+              "label": "0-1m",
+              "count": 417
+            },
+            {
+              "bin": 1,
+              "label": "1-2m",
+              "count": 354
+            },
+            {
+              "bin": 2,
+              "label": "2-3m",
+              "count": 16
+            },
+            {
+              "bin": 3,
+              "label": "3-4m",
+              "count": 998
+            },
+            {
+              "bin": 4,
+              "label": "4-5m",
+              "count": 348
+            },
+            {
+              "bin": 5,
+              "label": "5-6m",
+              "count": 1764
+            },
+            {
+              "bin": 6,
+              "label": "6-7m",
+              "count": 526
+            },
+            {
+              "bin": 7,
+              "label": "7-8m",
+              "count": 1906
+            },
+            {
+              "bin": 8,
+              "label": "8-9m",
+              "count": 193
+            },
+            {
+              "bin": 9,
+              "label": "9-10m",
+              "count": 1068
+            },
+            {
+              "bin": 10,
+              "label": "10-11m",
+              "count": 1272
+            },
+            {
+              "bin": 11,
+              "label": "11-12m",
+              "count": 972
+            },
+            {
+              "bin": 12,
+              "label": "12-13m",
+              "count": 1596
+            },
+            {
+              "bin": 13,
+              "label": "13-14m",
+              "count": 1302
+            },
+            {
+              "bin": 14,
+              "label": "14-15m",
+              "count": 909
+            },
+            {
+              "bin": 15,
+              "label": "15-16m",
+              "count": 127
+            },
+            {
+              "bin": 16,
+              "label": "16-17m",
+              "count": 404
+            },
+            {
+              "bin": 17,
+              "label": "17-18m",
+              "count": 409
+            },
+            {
+              "bin": 18,
+              "label": "18-19m",
+              "count": 823
+            },
+            {
+              "bin": 19,
+              "label": "19-20m",
+              "count": 240
+            }
+          ],
+          "frictionSignals": [
+            {
+              "name": "<Unknown>",
+              "count": 330
+            },
+            {
+              "name": "payment_failed",
+              "count": 146
+            },
+            {
+              "name": "error_click",
+              "count": 24
+            }
+          ],
+          "detours": [
+            {
+              "name": "/shipping-policy",
+              "count": 389
+            },
+            {
+              "name": "<Unknown>",
+              "count": 366
+            },
+            {
+              "name": "/faq",
+              "count": 245
+            }
+          ]
+        }
+      },
+      "2|3": {
+        "betweenSteps": {
+          "histogram": [
+            {
+              "bin": 0,
+              "label": "0-1m",
+              "count": 584
+            },
+            {
+              "bin": 1,
+              "label": "1-2m",
+              "count": 1378
+            },
+            {
+              "bin": 2,
+              "label": "2-3m",
+              "count": 1250
+            },
+            {
+              "bin": 3,
+              "label": "3-4m",
+              "count": 1532
+            },
+            {
+              "bin": 4,
+              "label": "4-5m",
+              "count": 61
+            },
+            {
+              "bin": 5,
+              "label": "5-6m",
+              "count": 1690
+            },
+            {
+              "bin": 6,
+              "label": "6-7m",
+              "count": 1175
+            },
+            {
+              "bin": 7,
+              "label": "7-8m",
+              "count": 673
+            },
+            {
+              "bin": 8,
+              "label": "8-9m",
+              "count": 72
+            },
+            {
+              "bin": 9,
+              "label": "9-10m",
+              "count": 1277
+            },
+            {
+              "bin": 10,
+              "label": "10-11m",
+              "count": 46
+            },
+            {
+              "bin": 11,
+              "label": "11-12m",
+              "count": 926
+            },
+            {
+              "bin": 12,
+              "label": "12-13m",
+              "count": 1220
+            },
+            {
+              "bin": 13,
+              "label": "13-14m",
+              "count": 100
+            },
+            {
+              "bin": 14,
+              "label": "14-15m",
+              "count": 1294
+            },
+            {
+              "bin": 15,
+              "label": "15-16m",
+              "count": 1053
+            },
+            {
+              "bin": 16,
+              "label": "16-17m",
+              "count": 607
+            },
+            {
+              "bin": 17,
+              "label": "17-18m",
+              "count": 357
+            },
+            {
+              "bin": 18,
+              "label": "18-19m",
+              "count": 1455
+            },
+            {
+              "bin": 19,
+              "label": "19-20m",
+              "count": 1313
+            }
+          ],
+          "frictionSignals": [
+            {
+              "name": "<Unknown>",
+              "count": 292
+            },
+            {
+              "name": "error_click",
+              "count": 111
+            },
+            {
+              "name": "payment_failed",
+              "count": 36
+            }
+          ],
+          "detours": [
+            {
+              "name": "<Unknown>",
+              "count": 459
+            },
+            {
+              "name": "/faq",
+              "count": 380
+            },
+            {
+              "name": "/shipping-policy",
+              "count": 39
+            }
+          ]
+        }
+      },
+      "3|4": {
+        "betweenSteps": {
+          "histogram": [
+            {
+              "bin": 0,
+              "label": "0-1m",
+              "count": 366
+            },
+            {
+              "bin": 1,
+              "label": "1-2m",
+              "count": 10
+            },
+            {
+              "bin": 2,
+              "label": "2-3m",
+              "count": 620
+            },
+            {
+              "bin": 3,
+              "label": "3-4m",
+              "count": 169
+            },
+            {
+              "bin": 4,
+              "label": "4-5m",
+              "count": 774
+            },
+            {
+              "bin": 5,
+              "label": "5-6m",
+              "count": 496
+            },
+            {
+              "bin": 6,
+              "label": "6-7m",
+              "count": 997
+            },
+            {
+              "bin": 7,
+              "label": "7-8m",
+              "count": 543
+            },
+            {
+              "bin": 8,
+              "label": "8-9m",
+              "count": 986
+            },
+            {
+              "bin": 9,
+              "label": "9-10m",
+              "count": 1338
+            },
+            {
+              "bin": 10,
+              "label": "10-11m",
+              "count": 1048
+            },
+            {
+              "bin": 11,
+              "label": "11-12m",
+              "count": 830
+            },
+            {
+              "bin": 12,
+              "label": "12-13m",
+              "count": 243
+            },
+            {
+              "bin": 13,
+              "label": "13-14m",
+              "count": 1009
+            },
+            {
+              "bin": 14,
+              "label": "14-15m",
+              "count": 26
+            },
+            {
+              "bin": 15,
+              "label": "15-16m",
+              "count": 161
+            },
+            {
+              "bin": 16,
+              "label": "16-17m",
+              "count": 1242
+            },
+            {
+              "bin": 17,
+              "label": "17-18m",
+              "count": 69
+            },
+            {
+              "bin": 18,
+              "label": "18-19m",
+              "count": 914
+            },
+            {
+              "bin": 19,
+              "label": "19-20m",
+              "count": 1068
+            }
+          ],
+          "frictionSignals": [
+            {
+              "name": "<Unknown>",
+              "count": 182
+            },
+            {
+              "name": "error_click",
+              "count": 121
+            },
+            {
+              "name": "payment_failed",
+              "count": 70
+            }
+          ],
+          "detours": [
+            {
+              "name": "<Unknown>",
+              "count": 378
+            },
+            {
+              "name": "/shipping-policy",
+              "count": 285
+            },
+            {
+              "name": "/faq",
+              "count": 84
+            }
+          ]
+        }
+      },
+      "4|5": {
+        "betweenSteps": {
+          "histogram": [
+            {
+              "bin": 0,
+              "label": "0-1m",
+              "count": 426
+            },
+            {
+              "bin": 1,
+              "label": "1-2m",
+              "count": 122
+            },
+            {
+              "bin": 2,
+              "label": "2-3m",
+              "count": 450
+            },
+            {
+              "bin": 3,
+              "label": "3-4m",
+              "count": 503
+            },
+            {
+              "bin": 4,
+              "label": "4-5m",
+              "count": 840
+            },
+            {
+              "bin": 5,
+              "label": "5-6m",
+              "count": 51
+            },
+            {
+              "bin": 6,
+              "label": "6-7m",
+              "count": 282
+            },
+            {
+              "bin": 7,
+              "label": "7-8m",
+              "count": 152
+            },
+            {
+              "bin": 8,
+              "label": "8-9m",
+              "count": 870
+            },
+            {
+              "bin": 9,
+              "label": "9-10m",
+              "count": 976
+            },
+            {
+              "bin": 10,
+              "label": "10-11m",
+              "count": 547
+            },
+            {
+              "bin": 11,
+              "label": "11-12m",
+              "count": 331
+            },
+            {
+              "bin": 12,
+              "label": "12-13m",
+              "count": 273
+            },
+            {
+              "bin": 13,
+              "label": "13-14m",
+              "count": 195
+            },
+            {
+              "bin": 14,
+              "label": "14-15m",
+              "count": 814
+            },
+            {
+              "bin": 15,
+              "label": "15-16m",
+              "count": 697
+            },
+            {
+              "bin": 16,
+              "label": "16-17m",
+              "count": 648
+            },
+            {
+              "bin": 17,
+              "label": "17-18m",
+              "count": 20
+            },
+            {
+              "bin": 18,
+              "label": "18-19m",
+              "count": 647
+            },
+            {
+              "bin": 19,
+              "label": "19-20m",
+              "count": 637
+            }
+          ],
+          "frictionSignals": [
+            {
+              "name": "<Unknown>",
+              "count": 172
+            },
+            {
+              "name": "payment_failed",
+              "count": 58
+            },
+            {
+              "name": "error_click",
+              "count": 15
+            }
+          ],
+          "detours": [
+            {
+              "name": "<Unknown>",
+              "count": 417
+            },
+            {
+              "name": "/shipping-policy",
+              "count": 52
+            },
+            {
+              "name": "/faq",
+              "count": 21
+            }
+          ]
+        }
+      },
+      "5|6": {
+        "betweenSteps": {
+          "histogram": [
+            {
+              "bin": 0,
+              "label": "0-1m",
+              "count": 98
+            },
+            {
+              "bin": 1,
+              "label": "1-2m",
+              "count": 846
+            },
+            {
+              "bin": 2,
+              "label": "2-3m",
+              "count": 431
+            },
+            {
+              "bin": 3,
+              "label": "3-4m",
+              "count": 721
+            },
+            {
+              "bin": 4,
+              "label": "4-5m",
+              "count": 261
+            },
+            {
+              "bin": 5,
+              "label": "5-6m",
+              "count": 17
+            },
+            {
+              "bin": 6,
+              "label": "6-7m",
+              "count": 110
+            },
+            {
+              "bin": 7,
+              "label": "7-8m",
+              "count": 18
+            },
+            {
+              "bin": 8,
+              "label": "8-9m",
+              "count": 786
+            },
+            {
+              "bin": 9,
+              "label": "9-10m",
+              "count": 29
+            },
+            {
+              "bin": 10,
+              "label": "10-11m",
+              "count": 235
+            },
+            {
+              "bin": 11,
+              "label": "11-12m",
+              "count": 849
+            },
+            {
+              "bin": 12,
+              "label": "12-13m",
+              "count": 240
+            },
+            {
+              "bin": 13,
+              "label": "13-14m",
+              "count": 56
+            },
+            {
+              "bin": 14,
+              "label": "14-15m",
+              "count": 68
+            },
+            {
+              "bin": 15,
+              "label": "15-16m",
+              "count": 651
+            },
+            {
+              "bin": 16,
+              "label": "16-17m",
+              "count": 180
+            },
+            {
+              "bin": 17,
+              "label": "17-18m",
+              "count": 14
+            },
+            {
+              "bin": 18,
+              "label": "18-19m",
+              "count": 486
+            },
+            {
+              "bin": 19,
+              "label": "19-20m",
+              "count": 370
+            }
+          ],
+          "frictionSignals": [
+            {
+              "name": "<Unknown>",
+              "count": 173
+            },
+            {
+              "name": "error_click",
+              "count": 34
+            },
+            {
+              "name": "payment_failed",
+              "count": 10
+            }
+          ],
+          "detours": [
+            {
+              "name": "<Unknown>",
+              "count": 328
+            },
+            {
+              "name": "/faq",
+              "count": 94
+            },
+            {
+              "name": "/shipping-policy",
+              "count": 13
+            }
+          ]
+        }
+      },
+      "6|7": {
+        "betweenSteps": {
+          "histogram": [
+            {
+              "bin": 0,
+              "label": "0-1m",
+              "count": 546
+            },
+            {
+              "bin": 1,
+              "label": "1-2m",
+              "count": 14
+            },
+            {
+              "bin": 2,
+              "label": "2-3m",
+              "count": 434
+            },
+            {
+              "bin": 3,
+              "label": "3-4m",
+              "count": 463
+            },
+            {
+              "bin": 4,
+              "label": "4-5m",
+              "count": 14
+            },
+            {
+              "bin": 5,
+              "label": "5-6m",
+              "count": 453
+            },
+            {
+              "bin": 6,
+              "label": "6-7m",
+              "count": 144
+            },
+            {
+              "bin": 7,
+              "label": "7-8m",
+              "count": 44
+            },
+            {
+              "bin": 8,
+              "label": "8-9m",
+              "count": 473
+            },
+            {
+              "bin": 9,
+              "label": "9-10m",
+              "count": 211
+            },
+            {
+              "bin": 10,
+              "label": "10-11m",
+              "count": 571
+            },
+            {
+              "bin": 11,
+              "label": "11-12m",
+              "count": 674
+            },
+            {
+              "bin": 12,
+              "label": "12-13m",
+              "count": 272
+            },
+            {
+              "bin": 13,
+              "label": "13-14m",
+              "count": 249
+            },
+            {
+              "bin": 14,
+              "label": "14-15m",
+              "count": 345
+            },
+            {
+              "bin": 15,
+              "label": "15-16m",
+              "count": 576
+            },
+            {
+              "bin": 16,
+              "label": "16-17m",
+              "count": 365
+            },
+            {
+              "bin": 17,
+              "label": "17-18m",
+              "count": 496
+            },
+            {
+              "bin": 18,
+              "label": "18-19m",
+              "count": 587
+            },
+            {
+              "bin": 19,
+              "label": "19-20m",
+              "count": 226
+            }
+          ],
+          "frictionSignals": [
+            {
+              "name": "<Unknown>",
+              "count": 108
+            },
+            {
+              "name": "payment_failed",
+              "count": 61
+            },
+            {
+              "name": "error_click",
+              "count": 14
+            }
+          ],
+          "detours": [
+            {
+              "name": "/shipping-policy",
+              "count": 149
+            },
+            {
+              "name": "<Unknown>",
+              "count": 146
+            },
+            {
+              "name": "/faq",
+              "count": 72
+            }
+          ]
+        }
+      }
+    }
+  },
+  "deepDiveBySegment": {
+    "all": {
+      "1": {
+        "summary": {
+          "users": 10000,
+          "sessions": 12000,
+          "conversionFromPrev": 0.0
+        },
+        "channels": [
+          {
+            "name": "google/organic",
+            "count": 4398
+          },
+          {
+            "name": "<Unknown>",
+            "count": 2527
+          },
+          {
+            "name": "newsletter/email",
+            "count": 1199
+          },
+          {
+            "name": "google/cpc",
+            "count": 966
+          },
+          {
+            "name": "facebook/social",
+            "count": 497
+          },
+          {
+            "name": "direct/none",
+            "count": 413
+          }
+        ],
+        "pages": [
+          {
+            "name": "/home",
+            "count": 3476
+          },
+          {
+            "name": "<Unknown Page>",
+            "count": 1600
+          },
+          {
+            "name": "/product/A",
+            "count": 1558
+          },
+          {
+            "name": "Item 8",
+            "count": 1201
+          },
+          {
+            "name": "Item 9",
+            "count": 652
+          },
+          {
+            "name": "/cart",
+            "count": 448
+          },
+          {
+            "name": "Item 6",
+            "count": 415
+          },
+          {
+            "name": "/category/B",
+            "count": 411
+          },
+          {
+            "name": "Item 5",
+            "count": 99
+          },
+          {
+            "name": "Item 7",
+            "count": 84
+          },
+          {
+            "name": "/checkout",
+            "count": 56
+          }
+        ],
+        "microEvents": [
+          {
+            "name": "<Other>",
+            "count": 4506
+          },
+          {
+            "name": "select_promotion",
+            "count": 2842
+          },
+          {
+            "name": "view_ad",
+            "count": 1555
+          },
+          {
+            "name": "view_promotion",
+            "count": 592
+          },
+          {
+            "name": "search",
+            "count": 505
+          }
+        ]
+      },
+      "2": {
+        "summary": {
+          "users": 8782,
+          "sessions": 10538,
+          "conversionFromPrev": 0.8782
+        },
+        "channels": [
+          {
+            "name": "<Unknown>",
+            "count": 2087
+          },
+          {
+            "name": "google/cpc",
+            "count": 1822
+          },
+          {
+            "name": "google/organic",
+            "count": 1794
+          },
+          {
+            "name": "direct/none",
+            "count": 1732
+          },
+          {
+            "name": "newsletter/email",
+            "count": 708
+          },
+          {
+            "name": "facebook/social",
+            "count": 639
+          }
+        ],
+        "pages": [
+          {
+            "name": "/home",
+            "count": 4069
+          },
+          {
+            "name": "/product/A",
+            "count": 1828
+          },
+          {
+            "name": "/checkout",
+            "count": 1188
+          },
+          {
+            "name": "Item 5",
+            "count": 500
+          },
+          {
+            "name": "Item 6",
+            "count": 394
+          },
+          {
+            "name": "/cart",
+            "count": 280
+          },
+          {
+            "name": "<Unknown Page>",
+            "count": 143
+          },
+          {
+            "name": "Item 9",
+            "count": 132
+          },
+          {
+            "name": "/category/B",
+            "count": 130
+          },
+          {
+            "name": "Item 7",
+            "count": 88
+          },
+          {
+            "name": "Item 8",
+            "count": 30
+          }
+        ],
+        "microEvents": [
+          {
+            "name": "view_item_list",
+            "count": 3558
+          },
+          {
+            "name": "select_item",
+            "count": 2254
+          },
+          {
+            "name": "<Other>",
+            "count": 1575
+          },
+          {
+            "name": "view_promotion",
+            "count": 1214
+          },
+          {
+            "name": "search",
+            "count": 181
+          }
+        ]
+      },
+      "3": {
+        "summary": {
+          "users": 7470,
+          "sessions": 8964,
+          "conversionFromPrev": 0.8506035071737645
+        },
+        "channels": [
+          {
+            "name": "direct/none",
+            "count": 2468
+          },
+          {
+            "name": "google/cpc",
+            "count": 1926
+          },
+          {
+            "name": "newsletter/email",
+            "count": 1071
+          },
+          {
+            "name": "<Unknown>",
+            "count": 1042
+          },
+          {
+            "name": "google/organic",
+            "count": 495
+          },
+          {
+            "name": "facebook/social",
+            "count": 468
+          }
+        ],
+        "pages": [
+          {
+            "name": "/home",
+            "count": 3321
+          },
+          {
+            "name": "/product/A",
+            "count": 1084
+          },
+          {
+            "name": "/category/B",
+            "count": 717
+          },
+          {
+            "name": "/cart",
+            "count": 708
+          },
+          {
+            "name": "/checkout",
+            "count": 531
+          },
+          {
+            "name": "Item 5",
+            "count": 415
+          },
+          {
+            "name": "Item 6",
+            "count": 276
+          },
+          {
+            "name": "<Unknown Page>",
+            "count": 167
+          },
+          {
+            "name": "Item 7",
+            "count": 119
+          },
+          {
+            "name": "Item 8",
+            "count": 68
+          },
+          {
+            "name": "Item 9",
+            "count": 64
+          }
+        ],
+        "microEvents": [
+          {
+            "name": "add_to_wishlist",
+            "count": 3368
+          },
+          {
+            "name": "<Other>",
+            "count": 1438
+          },
+          {
+            "name": "select_item",
+            "count": 1253
+          },
+          {
+            "name": "view_item_list",
+            "count": 914
+          },
+          {
+            "name": "share",
+            "count": 497
+          }
+        ]
+      },
+      "4": {
+        "summary": {
+          "users": 4904,
+          "sessions": 5884,
+          "conversionFromPrev": 0.6564926372155288
+        },
+        "channels": [
+          {
+            "name": "direct/none",
+            "count": 1658
+          },
+          {
+            "name": "<Unknown>",
+            "count": 1086
+          },
+          {
+            "name": "google/cpc",
+            "count": 817
+          },
+          {
+            "name": "facebook/social",
+            "count": 801
+          },
+          {
+            "name": "newsletter/email",
+            "count": 435
+          },
+          {
+            "name": "google/organic",
+            "count": 107
+          }
+        ],
+        "pages": [
+          {
+            "name": "/home",
+            "count": 2013
+          },
+          {
+            "name": "/category/B",
+            "count": 782
+          },
+          {
+            "name": "/product/A",
+            "count": 513
+          },
+          {
+            "name": "/cart",
+            "count": 402
+          },
+          {
+            "name": "<Unknown Page>",
+            "count": 306
+          },
+          {
+            "name": "Item 6",
+            "count": 267
+          },
+          {
+            "name": "/checkout",
+            "count": 249
+          },
+          {
+            "name": "Item 7",
+            "count": 173
+          },
+          {
+            "name": "Item 8",
+            "count": 153
+          },
+          {
+            "name": "Item 5",
+            "count": 39
+          },
+          {
+            "name": "Item 9",
+            "count": 7
+          }
+        ],
+        "microEvents": [
+          {
+            "name": "view_cart",
+            "count": 1621
+          },
+          {
+            "name": "<Other>",
+            "count": 1421
+          },
+          {
+            "name": "remove_from_cart",
+            "count": 771
+          },
+          {
+            "name": "view_promotion",
+            "count": 703
+          },
+          {
+            "name": "add_to_wishlist",
+            "count": 388
+          }
+        ]
+      },
+      "5": {
+        "summary": {
+          "users": 4355,
+          "sessions": 5226,
+          "conversionFromPrev": 0.8880505709624796
+        },
+        "channels": [
+          {
+            "name": "<Unknown>",
+            "count": 1248
+          },
+          {
+            "name": "google/cpc",
+            "count": 920
+          },
+          {
+            "name": "newsletter/email",
+            "count": 914
+          },
+          {
+            "name": "google/organic",
+            "count": 669
+          },
+          {
+            "name": "facebook/social",
+            "count": 578
+          },
+          {
+            "name": "direct/none",
+            "count": 26
+          }
+        ],
+        "pages": [
+          {
+            "name": "/product/A",
+            "count": 1294
+          },
+          {
+            "name": "/cart",
+            "count": 923
+          },
+          {
+            "name": "/checkout",
+            "count": 633
+          },
+          {
+            "name": "/home",
+            "count": 459
+          },
+          {
+            "name": "/category/B",
+            "count": 399
+          },
+          {
+            "name": "Item 5",
+            "count": 220
+          },
+          {
+            "name": "Item 6",
+            "count": 122
+          },
+          {
+            "name": "Item 7",
+            "count": 121
+          },
+          {
+            "name": "<Unknown Page>",
+            "count": 81
+          },
+          {
+            "name": "Item 9",
+            "count": 75
+          },
+          {
+            "name": "Item 8",
+            "count": 28
+          }
+        ],
+        "microEvents": [
+          {
+            "name": "<Other>",
+            "count": 1805
+          },
+          {
+            "name": "view_cart",
+            "count": 1510
+          },
+          {
+            "name": "remove_from_cart",
+            "count": 638
+          },
+          {
+            "name": "add_shipping_info",
+            "count": 402
+          }
+        ]
+      },
+      "6": {
+        "summary": {
+          "users": 3671,
+          "sessions": 4405,
+          "conversionFromPrev": 0.842939150401837
+        },
+        "channels": [
+          {
+            "name": "direct/none",
+            "count": 1323
+          },
+          {
+            "name": "google/organic",
+            "count": 766
+          },
+          {
+            "name": "<Unknown>",
+            "count": 586
+          },
+          {
+            "name": "newsletter/email",
+            "count": 585
+          },
+          {
+            "name": "facebook/social",
+            "count": 258
+          },
+          {
+            "name": "google/cpc",
+            "count": 153
+          }
+        ],
+        "pages": [
+          {
+            "name": "/home",
+            "count": 1506
+          },
+          {
+            "name": "/cart",
+            "count": 507
+          },
+          {
+            "name": "/category/B",
+            "count": 495
+          },
+          {
+            "name": "/product/A",
+            "count": 394
+          },
+          {
+            "name": "Item 5",
+            "count": 294
+          },
+          {
+            "name": "<Unknown Page>",
+            "count": 244
+          },
+          {
+            "name": "Item 6",
+            "count": 95
+          },
+          {
+            "name": "Item 7",
+            "count": 66
+          },
+          {
+            "name": "Item 9",
+            "count": 34
+          },
+          {
+            "name": "/checkout",
+            "count": 24
+          },
+          {
+            "name": "Item 8",
+            "count": 12
+          }
+        ],
+        "microEvents": [
+          {
+            "name": "add_payment_info",
+            "count": 1565
+          },
+          {
+            "name": "<Other>",
+            "count": 1089
+          },
+          {
+            "name": "add_shipping_info",
+            "count": 531
+          },
+          {
+            "name": "Item 2",
+            "count": 486
+          }
+        ]
+      },
+      "7": {
+        "summary": {
+          "users": 3295,
+          "sessions": 3954,
+          "conversionFromPrev": 0.8975755924816127
+        },
+        "channels": [
+          {
+            "name": "<Unknown>",
+            "count": 1240
+          },
+          {
+            "name": "google/organic",
+            "count": 587
+          },
+          {
+            "name": "google/cpc",
+            "count": 542
+          },
+          {
+            "name": "newsletter/email",
+            "count": 438
+          },
+          {
+            "name": "facebook/social",
+            "count": 303
+          },
+          {
+            "name": "direct/none",
+            "count": 185
+          }
+        ],
+        "pages": [
+          {
+            "name": "/home",
+            "count": 1239
+          },
+          {
+            "name": "/product/A",
+            "count": 996
+          },
+          {
+            "name": "/category/B",
+            "count": 435
+          },
+          {
+            "name": "Item 7",
+            "count": 195
+          },
+          {
+            "name": "/cart",
+            "count": 108
+          },
+          {
+            "name": "<Unknown Page>",
+            "count": 102
+          },
+          {
+            "name": "Item 8",
+            "count": 85
+          },
+          {
+            "name": "Item 9",
+            "count": 68
+          },
+          {
+            "name": "Item 6",
+            "count": 49
+          },
+          {
+            "name": "/checkout",
+            "count": 10
+          },
+          {
+            "name": "Item 5",
+            "count": 8
+          }
+        ],
+        "microEvents": [
+          {
+            "name": "<Other>",
+            "count": 1288
+          },
+          {
+            "name": "refund",
+            "count": 1081
+          },
+          {
+            "name": "share",
+            "count": 685
+          },
+          {
+            "name": "Item 2",
+            "count": 241
+          }
+        ]
+      }
+    }
+  }
+}
