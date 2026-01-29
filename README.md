@@ -1,54 +1,36 @@
-# Journey Funnel Explorer
+# Journey Explorer
 
-An interactive D3 + React visualization for exploring ecommerce user journeys, built with BigQuery GA4 data.
+**Journey Explorer** is a proof-of-concept visualization tool designed to shift the focus of digital analytics from static pageviews to dynamic user journeys.
 
-## Overview
+It implements the **"Spine and Deep Dive"** mental model described in the article *[Why Page Views and KPIs Fail Business: Journeys Are the Simpler Path](./From_Pageviews_to_Journeys.md)*.
 
-This application visualizes a multi-step user journey (Session Start -> Purchase) and allows deep-dive exploration into specific steps and transitions. It is designed to be embedded in web articles or dashboards.
+## The Problem
+Traditional dashboards excel at answering "how many" (Pageviews, Sessions, Conversion Rate) but fail to answer "why." They flatten complex, multi-step user behaviors into disconnected aggregate metrics, hiding the friction, loops, and detours that actually drive performance.
+
+## The Solution: Spine and Deep Dive
+This tool demonstrates a new workflow for exploring user behavior:
+
+1.  **The Spine (Orientation):** A horizontal, Sankey-style funnel that visualizes the ideal user path (e.g., *Session Start -> View Item -> Add to Cart -> Purchase*). The thickness of the flow represents user volume, providing an instant visual cue of drop-off points.
+2.  **The Deep Dive (Exploration):** An interactive drill-down capability. Clicking on any transition expands a panel to reveal the "why" behind the movement:
+    *   **Time Distribution:** How long does the transition take?
+    *   **Micro-Events:** What specific actions (e.g., *view_shipping_info*, *remove_from_cart*) happened inside the step?
+    *   **Friction Signals:** Where are users encountering errors or confusion?
 
 ## Features
+*   **Interactive Sankey Visualization:** Visualizes flow volume and conversion rates.
+*   **Drill-Down Panels:** Detailed metrics for every step and transition.
+*   **Ecommerce Micro-Events:** Context-aware event tracking (e.g., cart actions, checkout steps).
+*   **Friction & Detour Analysis:** Identifies where users get stuck or lost.
 
-- **Journey Funnel**: Interactive visualization of user flow with conversion rates and drop-offs.
-- **Deep Dive Mode**: Detailed metrics for each step (Traffic Channels, Top Pages, Micro-events).
-- **Transition Analysis**: Histograms of time-to-next-step, friction signals, and detours.
-- **Responsive Design**: Built with Tailwind CSS for seamless embedding.
+## Tech Stack
+*   **React + TypeScript + Vite**
+*   **D3.js** for custom visualizations
+*   **Tailwind CSS** for styling
 
-## Setup & Deployment
+## Getting Started
+1.  Clone the repository.
+2.  Run `npm install` in the `app` directory.
+3.  Run `npm run dev` to start the local server.
 
-1.  **Install Dependencies**:
-    ```bash
-    cd app
-    npm install
-    ```
-
-2.  **Build for Production**:
-    ```bash
-    npm run build
-    ```
-
-3.  **Deploy**:
-    - Upload the contents of the `app/dist` folder to any static hosting provider (GitHub Pages, Netlify, Vercel, S3).
-    - The application is self-contained and loads data from `journey_data.json`.
-
-## Data Pipeline
-
-The data is derived from the BigQuery public dataset `ga4_obfuscated_sample_ecommerce`.
-
-1.  **SQL Extraction**: Queries in `sql/` extract raw events, map them to journey steps, and aggregate metrics.
-2.  **Data Processing**: `scripts/generate_journey_json.py` processes the aggregated data (or generates synthetic data for testing) and applies imputation rules.
-
-### Imputation & Data Completion
-
-To ensure a robust visualization even with sparse or obfuscated data, the following rules are applied (NO hallucination, only deterministic smoothing):
-
--   **Missing Channels**: Source/Medium fields are coalesced to `<Unknown>` if missing.
--   **Sparse Distributions**: Dirichlet/Add-one smoothing is applied to histograms to ensure continuity.
--   **Missing Pages**: Unidentified page locations are bucketed as `<Unknown Page>`.
--   **Micro-events**: If dominant events are fewer than 5, the remainder is aggregated into `<Other>`.
-
-## Project Structure
-
--   `app/`: React + TypeScript application.
--   `sql/`: BigQuery SQL queries for data extraction.
--   `scripts/`: Python scripts for data processing and JSON generation.
--   `journey_data.json`: The data file consumed by the frontend.
+---
+*Part of the "Analytics Thinking" series.*
