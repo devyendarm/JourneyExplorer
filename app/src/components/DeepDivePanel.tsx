@@ -197,18 +197,21 @@ export const DeepDivePanel: React.FC<DeepDivePanelProps> = ({
                         {/* Histogram */}
                         <div className="bg-white p-6 rounded-xl border border-gray-200 col-span-1 lg:col-span-2">
                             <h3 className="text-lg font-semibold mb-4">Time Distribution</h3>
-                            <div className="h-32 flex items-end gap-1"> {/* Reduced height from h-48 to h-32 */}
-                                {histogram.map((bin, idx) => (
-                                    <div key={idx} className="flex-1 flex flex-col items-center group relative">
-                                        <div
-                                            className="w-full bg-blue-500 rounded-t-sm hover:bg-blue-600 transition-colors"
-                                            style={{ height: `${Math.max(4, (bin.count / maxHist) * 100)}%` }} // Min height for visibility
-                                        />
-                                        <div className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap z-10 shadow-lg">
-                                            {bin.label}: {bin.count} users
+                            <div className="h-32 flex items-end gap-1">
+                                {histogram.map((bin, idx) => {
+                                    const heightPct = maxHist > 0 ? (bin.count / maxHist) * 100 : 0;
+                                    return (
+                                        <div key={idx} className="flex-1 flex flex-col items-center group relative h-full justify-end">
+                                            <div
+                                                className="w-full bg-blue-500 rounded-t-sm hover:bg-blue-600 transition-colors"
+                                                style={{ height: `${Math.max(4, heightPct)}%` }}
+                                            />
+                                            <div className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap z-10 shadow-lg">
+                                                {bin.label}: {bin.count} users
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                             <div className="flex justify-between text-xs text-gray-400 mt-2 border-t border-gray-100 pt-2">
                                 <span>0m</span>
