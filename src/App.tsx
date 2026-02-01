@@ -25,11 +25,19 @@ function App() {
       .then(d => {
         console.log("Data loaded:", d);
         setData(d);
-        // Auto-select first step
-        if (d.steps.length > 0) {
-          setSelection({ type: 'step', stepId: d.steps[0].stepId });
+        // Auto-select first transition (pipe) to show friction/detour data
+        if (d.steps.length > 1) {
+          setSelection({
+            type: 'transition',
+            fromStepId: d.steps[0].stepId,
+            toStepId: d.steps[1].stepId
+          });
           setViewMode('DEEP_DIVE');
           // Set initial height for deep dive mode
+          setFunnelHeight(window.innerHeight * 0.4);
+        } else if (d.steps.length > 0) {
+          setSelection({ type: 'step', stepId: d.steps[0].stepId });
+          setViewMode('DEEP_DIVE');
           setFunnelHeight(window.innerHeight * 0.4);
         }
       })

@@ -1,36 +1,73 @@
-# Journey Explorer
+# React + TypeScript + Vite
 
-**Journey Explorer** is a proof-of-concept visualization tool designed to shift the focus of digital analytics from static pageviews to dynamic user journeys.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-It implements the **"Spine and Deep Dive"** mental model described in the article *[Why Page Views and KPIs Fail Business: Journeys Are the Simpler Path](./From_Pageviews_to_Journeys.md)*.
+Currently, two official plugins are available:
 
-## The Problem
-Traditional dashboards excel at answering "how many" (Pageviews, Sessions, Conversion Rate) but fail to answer "why." They flatten complex, multi-step user behaviors into disconnected aggregate metrics, hiding the friction, loops, and detours that actually drive performance.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## The Solution: Spine and Deep Dive
-This tool demonstrates a new workflow for exploring user behavior:
+## React Compiler
 
-1.  **The Spine (Orientation):** A horizontal, Sankey-style funnel that visualizes the ideal user path (e.g., *Session Start -> View Item -> Add to Cart -> Purchase*). The thickness of the flow represents user volume, providing an instant visual cue of drop-off points.
-2.  **The Deep Dive (Exploration):** An interactive drill-down capability. Clicking on any transition expands a panel to reveal the "why" behind the movement:
-    *   **Time Distribution:** How long does the transition take?
-    *   **Micro-Events:** What specific actions (e.g., *view_shipping_info*, *remove_from_cart*) happened inside the step?
-    *   **Friction Signals:** Where are users encountering errors or confusion?
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Features
-*   **Interactive Sankey Visualization:** Visualizes flow volume and conversion rates.
-*   **Drill-Down Panels:** Detailed metrics for every step and transition.
-*   **Ecommerce Micro-Events:** Context-aware event tracking (e.g., cart actions, checkout steps).
-*   **Friction & Detour Analysis:** Identifies where users get stuck or lost.
+## Expanding the ESLint configuration
 
-## Tech Stack
-*   **React + TypeScript + Vite**
-*   **D3.js** for custom visualizations
-*   **Tailwind CSS** for styling
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## Getting Started
-1.  Clone the repository.
-2.  Run `npm install` in the `app` directory.
-3.  Run `npm run dev` to start the local server.
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
----
-*Part of the "Analytics Thinking" series.*
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
