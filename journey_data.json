@@ -208,18 +208,33 @@
           ],
           "detours": [
             {
-              "name": "/shipping-policy",
-              "count": 389
+              "name": "/home",
+              "count": 412
             },
             {
-              "name": "<Unknown>",
-              "count": 366
+              "name": "/search",
+              "count": 298
             },
             {
-              "name": "/faq",
-              "count": 245
+              "name": "/browse",
+              "count": 181
             }
-          ]
+          ],
+          "recoveries": [
+            {
+              "name": "/home",
+              "count": 187
+            },
+            {
+              "name": "/search",
+              "count": 134
+            },
+            {
+              "name": "/browse",
+              "count": 72
+            }
+          ],
+          "recoveryRate": 0.14
         }
       },
       "2|3": {
@@ -342,18 +357,33 @@
           ],
           "detours": [
             {
-              "name": "<Unknown>",
-              "count": 459
+              "name": "/category",
+              "count": 421
             },
             {
-              "name": "/faq",
-              "count": 380
+              "name": "/search",
+              "count": 318
             },
             {
-              "name": "/shipping-policy",
-              "count": 39
+              "name": "/sale",
+              "count": 139
             }
-          ]
+          ],
+          "recoveries": [
+            {
+              "name": "/category",
+              "count": 203
+            },
+            {
+              "name": "/search",
+              "count": 156
+            },
+            {
+              "name": "/sale",
+              "count": 58
+            }
+          ],
+          "recoveryRate": 0.21
         }
       },
       "3|4": {
@@ -476,18 +506,33 @@
           ],
           "detours": [
             {
-              "name": "<Unknown>",
-              "count": 378
+              "name": "/reviews",
+              "count": 352
             },
             {
-              "name": "/shipping-policy",
-              "count": 285
+              "name": "/size-guide",
+              "count": 241
             },
             {
-              "name": "/faq",
-              "count": 84
+              "name": "/similar-items",
+              "count": 154
             }
-          ]
+          ],
+          "recoveries": [
+            {
+              "name": "/reviews",
+              "count": 168
+            },
+            {
+              "name": "/size-guide",
+              "count": 112
+            },
+            {
+              "name": "/similar-items",
+              "count": 63
+            }
+          ],
+          "recoveryRate": 0.18
         }
       },
       "4|5": {
@@ -610,18 +655,33 @@
           ],
           "detours": [
             {
-              "name": "<Unknown>",
-              "count": 417
+              "name": "/cart",
+              "count": 389
             },
             {
-              "name": "/shipping-policy",
-              "count": 52
+              "name": "/promo-code",
+              "count": 198
             },
             {
-              "name": "/faq",
-              "count": 21
+              "name": "/wishlist",
+              "count": 87
             }
-          ]
+          ],
+          "recoveries": [
+            {
+              "name": "/cart",
+              "count": 221
+            },
+            {
+              "name": "/promo-code",
+              "count": 97
+            },
+            {
+              "name": "/wishlist",
+              "count": 41
+            }
+          ],
+          "recoveryRate": 0.28
         }
       },
       "5|6": {
@@ -744,18 +804,33 @@
           ],
           "detours": [
             {
-              "name": "<Unknown>",
-              "count": 328
+              "name": "/shipping-policy",
+              "count": 312
             },
             {
-              "name": "/faq",
-              "count": 94
+              "name": "/faq-shipping",
+              "count": 178
             },
+            {
+              "name": "/returns",
+              "count": 94
+            }
+          ],
+          "recoveries": [
             {
               "name": "/shipping-policy",
-              "count": 13
+              "count": 142
+            },
+            {
+              "name": "/faq-shipping",
+              "count": 89
+            },
+            {
+              "name": "/returns",
+              "count": 37
             }
-          ]
+          ],
+          "recoveryRate": 0.32
         }
       },
       "6|7": {
@@ -878,18 +953,33 @@
           ],
           "detours": [
             {
-              "name": "/shipping-policy",
-              "count": 149
+              "name": "/payment-faq",
+              "count": 203
             },
             {
-              "name": "<Unknown>",
-              "count": 146
+              "name": "/security-info",
+              "count": 141
             },
             {
-              "name": "/faq",
-              "count": 72
+              "name": "/promo-code",
+              "count": 88
             }
-          ]
+          ],
+          "recoveries": [
+            {
+              "name": "/payment-faq",
+              "count": 94
+            },
+            {
+              "name": "/security-info",
+              "count": 63
+            },
+            {
+              "name": "/promo-code",
+              "count": 38
+            }
+          ],
+          "recoveryRate": 0.22
         }
       }
     }
